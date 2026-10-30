@@ -60,7 +60,6 @@ body{
     box-shadow: 0 4px 14px rgba(0,0,0,.18);
 }
 
-/* Simple CSS-only image areas so no external files are required */
 .bird1{
     background:
         radial-gradient(circle at 62% 38%, #111 0 7%, transparent 8%),
