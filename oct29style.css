@@ -1,0 +1,90 @@
+body{
+    background-color: aquamarine;
+    margin: 0;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.frame{
+    border: 2px solid orange;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+    background: white;
+}
+
+.slidewrapper{
+    width: 400%;
+    height: 100%;
+    animation: slideshow 4s infinite;
+}
+
+@keyframes slideshow{
+    0%   { margin-left: 0%; }
+    25%  { margin-left: -100%; }
+    50%  { margin-left: -200%; }
+    75%  { margin-left: -300%; }
+    100% { margin-left: -300%; }
+}
+
+.frame > div > div{
+    width: 25%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.frame h1{
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 2;
+    font-size: 28px;
+}
+
+.s1{ background: #f2eadf; }
+.s2{ background: #d9f0ff; }
+.s3{ background: #ecf7df; }
+.s4{ background: #c47a2c; }
+
+.bird{
+    width: 72%;
+    height: 72%;
+    margin: 55px auto 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.18);
+}
+
+/* Simple CSS-only image areas so no external files are required */
+.bird1{
+    background:
+        radial-gradient(circle at 62% 38%, #111 0 7%, transparent 8%),
+        radial-gradient(circle at 60% 43%, #f5c542 0 14%, transparent 15%),
+        linear-gradient(135deg, #6a4b35 0 35%, #9d795f 36% 55%, #2f5d46 56% 75%, #d6c4a5 76%);
+}
+
+.bird2{
+    background:
+        radial-gradient(circle at 58% 35%, #111 0 6%, transparent 7%),
+        radial-gradient(circle at 57% 40%, #f3d34a 0 13%, transparent 14%),
+        linear-gradient(135deg, #70412c 0 32%, #b17754 33% 58%, #4b7d8a 59% 78%, #d8e0cf 79%);
+}
+
+.bird3{
+    background:
+        radial-gradient(circle at 64% 36%, #111 0 6%, transparent 7%),
+        radial-gradient(circle at 63% 41%, #f0c930 0 13%, transparent 14%),
+        linear-gradient(135deg, #4c683f 0 34%, #8aa57a 35% 58%, #2c5c69 59% 78%, #e5e2cf 79%);
+}
+
+.bird4{
+    background:
+        radial-gradient(circle at 60% 36%, #111 0 6%, transparent 7%),
+        radial-gradient(circle at 59% 41%, #f2cf3c 0 13%, transparent 14%),
+        linear-gradient(135deg, #815021 0 36%, #c87a2d 37% 58%, #587a54 59% 80%, #f0d7a2 81%);
+}
