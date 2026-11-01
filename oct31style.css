@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: #10273d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.scene {
+    position: relative;
+    width: min(920px, 96vw);
+    height: 650px;
+    overflow: hidden;
+    border-radius: 26px;
+    background: linear-gradient(#62d7ff 0%, #9cecff 45%, #ffd59c 100%);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.sun {
+    position: absolute;
+    top: 65px;
+    right: 85px;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background: #fff477;
+    box-shadow: 0 0 45px rgba(255, 244, 119, 0.75);
+}
+
+.cloud {
+    position: absolute;
+    width: 150px;
+    height: 38px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    background: inherit;
+}
+
+.cloud::before {
+    left: 25px;
+    width: 58px;
+    height: 58px;
+}
+
+.cloud::after {
+    right: 24px;
+    width: 72px;
+    height: 72px;
+}
+
+.cloud-one {
+    top: 120px;
+    left: 75px;
+}
+
+.cloud-two {
+    top: 205px;
+    right: 95px;
+    transform: scale(0.72);
+    opacity: 0.72;
+}
+
+.clock-panel {
+    position: absolute;
+    z-index: 5;
+    top: 42px;
+    left: 50%;
+    width: 430px;
+    padding: 20px 24px 18px;
+    transform: translateX(-50%);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 0 18px 45px rgba(19, 67, 95, 0.22);
+    backdrop-filter: blur(7px);
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: #14364a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.clock {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    background-image: url("clockimg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.18));
+}
+
+.hand {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    height: auto;
+    transform-origin: 0% 50%;
+}
+
+.hour-hand {
+    width: 104px;
+    margin-top: -26px;
+    animation-name: hourMove;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.minute-hand {
+    width: 142px;
+    margin-top: -35.5px;
+    animation-name: minuteMove;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hourMove {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes minuteMove {
+    from {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(270deg);
+    }
+}
+
+.center-pin {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    border: 4px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: #17384c;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+.time-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+    color: #14364a;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.arrow {
+    font-size: 24px;
+}
+
+.duration {
+    margin: 5px 0 0;
+    color: #3f6375;
+    font-size: 13px;
+}
+
+.skyline {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 190px;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 0 14px;
+    background: linear-gradient(to top, #14283a 0 28px, transparent 28px);
+}
+
+.building {
+    position: relative;
+    flex: 1;
+    min-width: 50px;
+    border-radius: 5px 5px 0 0;
+    background: #24465d;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.04);
+}
+
+.building::after {
+    content: "";
+    position: absolute;
+    inset: 12px 10px;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 225, 132, 0.85) 0 7px,
+        transparent 7px 18px
+    );
+    opacity: 0.85;
+}
+
+.building-1 { height: 92px; }
+.building-2 { height: 138px; background: #315b72; }
+.building-3 { height: 112px; }
+.building-4 { height: 170px; background: #1c3b53; }
+.building-5 { height: 128px; background: #315b72; }
+.building-6 { height: 158px; }
+.building-7 { height: 106px; background: #315b72; }
+.building-8 { height: 145px; }
+.building-9 { height: 86px; background: #315b72; }
+
+footer {
+    position: absolute;
+    z-index: 6;
+    left: 0;
+    right: 0;
+    bottom: 9px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 620px) {
+    .scene {
+        height: 620px;
+    }
+
+    .clock-panel {
+        width: 88%;
+    }
+
+    .clock {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hour-hand {
+        width: 92px;
+        margin-top: -23px;
+    }
+
+    .minute-hand {
+        width: 124px;
+        margin-top: -31px;
+    }
+}
