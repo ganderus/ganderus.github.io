@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ET710 Assignment 6 - Animated Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="scene">
+        <div class="sun" aria-hidden="true"></div>
+        <div class="cloud cloud-one" aria-hidden="true"></div>
+        <div class="cloud cloud-two" aria-hidden="true"></div>
+
+        <section class="clock-panel">
+            <p class="eyebrow">ET710 • ASSIGNMENT 6</p>
+
+            <div class="clock" aria-label="Animated clock moving from 3 PM to 4 PM">
+                <img class="hand hour-hand" src="hand.png" alt="Hour hand">
+                <img class="hand minute-hand" src="hand.png" alt="Minute hand">
+                <div class="center-pin" aria-hidden="true"></div>
+            </div>
+
+            <div class="time-info">
+                <span>3:00 PM</span>
+                <span class="arrow">→</span>
+                <span>4:00 PM</span>
+            </div>
+
+            <p class="duration">10-second CSS animation</p>
+        </section>
+
+        <div class="skyline" aria-hidden="true">
+            <div class="building building-1"></div>
+            <div class="building building-2"></div>
+            <div class="building building-3"></div>
+            <div class="building building-4"></div>
+            <div class="building building-5"></div>
+            <div class="building building-6"></div>
+            <div class="building building-7"></div>
+            <div class="building building-8"></div>
+            <div class="building building-9"></div>
+        </div>
+
+        <footer>Umut Gander • ET710</footer>
+    </main>
+</body>
+</html>
