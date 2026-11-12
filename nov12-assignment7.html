@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atatürk - Assignment 7</title>
+  <link rel="stylesheet" href="nov12-style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">ET710 - Assignment 7</p>
+      <h1>Mustafa Kemal Atatürk</h1>
+      <p class="hero-text">A CSS modal-window project about the founder and first President of the Republic of Türkiye.</p>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro">
+      <h2>Three Moments in Atatürk's Legacy</h2>
+      <p>Click a button to open a modal window. Each card focuses on a different part of Atatürk's life and legacy.</p>
+    </section>
+
+    <section class="card-grid" aria-label="Atatürk information cards">
+      <article class="product-card">
+        <img src="nov12-republic.svg" alt="Stylized Turkish flag and 1923 design" class="card-image">
+        <h3>Founding the Republic</h3>
+        <p>Atatürk led the national movement and became the first President of the Republic of Türkiye in 1923.</p>
+        <a class="open-button" href="#modal-one">Open Modal Link I</a>
+      </article>
+
+      <article class="product-card">
+        <img src="nov12-reforms.svg" alt="Stylized book and light representing reforms and education" class="card-image">
+        <h3>Reforms and Education</h3>
+        <p>His reforms changed education, law, public life, and the alphabet as Türkiye built new institutions.</p>
+        <a class="open-button" href="#modal-two">Open Modal Link II</a>
+      </article>
+
+      <article class="product-card">
+        <img src="nov12-legacy.svg" alt="Stylized Anıtkabir inspired monument graphic" class="card-image">
+        <h3>Legacy</h3>
+        <p>Atatürk's ideas about national sovereignty, education, and modernization remain important in Türkiye.</p>
+        <a class="open-button" href="#modal-three">Open Modal Link III</a>
+      </article>
+    </section>
+  </main>
+
+  <section id="modal-one" class="modal modal-blue" aria-labelledby="modal-one-title">
+    <div class="modal-window">
+      <a class="close-button" href="#" aria-label="Close modal">&times;</a>
+      <div class="modal-heading">
+        <p class="modal-kicker">Modal Window One</p>
+        <h2 id="modal-one-title">The Republic - 1923</h2>
+      </div>
+      <div class="modal-body">
+        <img src="nov12-republic.svg" alt="Republic of Türkiye themed graphic" class="modal-image">
+        <p>On October 29, 1923, the Republic of Türkiye was proclaimed. Mustafa Kemal Atatürk became its first President.</p>
+        <p>This moment is a major part of his historical legacy and the beginning of a new political era for Türkiye.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="modal-two" class="modal modal-green" aria-labelledby="modal-two-title">
+    <div class="modal-window">
+      <a class="close-button" href="#" aria-label="Close modal">&times;</a>
+      <div class="modal-heading">
+        <p class="modal-kicker">Modal Window Two</p>
+        <h2 id="modal-two-title">Reform and Education</h2>
+      </div>
+      <div class="modal-body">
+        <img src="nov12-reforms.svg" alt="Education and reform themed graphic" class="modal-image">
+        <p>Atatürk supported wide-ranging reforms in education, law, language, and civic life.</p>
+        <p>The Latin-based Turkish alphabet was introduced in 1928, and literacy and public education became major national priorities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="modal-three" class="modal modal-red" aria-labelledby="modal-three-title">
+    <div class="modal-window">
+      <a class="close-button" href="#" aria-label="Close modal">&times;</a>
+      <div class="modal-heading">
+        <p class="modal-kicker">Extra Product Block</p>
+        <h2 id="modal-three-title">A Lasting Legacy</h2>
+      </div>
+      <div class="modal-body">
+        <img src="nov12-legacy.svg" alt="Monument themed graphic inspired by Anıtkabir" class="modal-image">
+        <p>Mustafa Kemal Atatürk lived from 1881 to 1938. His leadership helped shape the institutions of modern Türkiye.</p>
+        <p>Anıtkabir in Ankara is his mausoleum and an important national memorial.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
